@@ -7,6 +7,12 @@ Developer Reference
 Documentation for the code itself is kept within the code, and is extracted via
 TypeDoc. See the developer reference documentation `here <dev/index.html>`_.
 
+Create developer reference:
+
+.. code:: bash
+
+    $ npm run docs
+
 Building extension
 ------------------
 As with most VS Code extensions you need you need `Node.JS <https://nodejs.org/en/>`_ installed.
@@ -52,3 +58,20 @@ Style
 * Use ``snake_case`` for variables.
 * Use ``kebab-case`` for files and directories. (hyphen-separated-names)
 * Prefix private members/methods with an underscore and write them ``_withCamelCase``
+
+Building user documentation
+---------------------------
+
+Prerequisites
+:::::::::::::
+
+* Python
+* Python packages sphinx, sphinx-autobuild, doc8 (for lint)
+
+Build
+:::::
+
+.. code:: bash
+
+    $ sphinx_build ./docs ./build/docs
+
